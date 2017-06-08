@@ -1,0 +1,23 @@
+<!--  YOUR CODE HERE -->
+<h1><%= @name %></h1>
+
+<h3>Ingredients:</h3>
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li><%= ingredient %>
+  <% end %>
+</ul>
+
+<h3>Directions:</h3>
+<ol>
+  <% @directions.each do |direction| %>
+    <li><%= direction %></li>
+  <% end %>
+</ol>
+
+<h2>Reviews:</h2>
+<% @reviews.each do |review| %>
+  <p>Name: <%=review[:username] %></p>
+  <p>Rating: <%=review[:rating] %></p>
+  <p>Review: <%=review[:review] %></p>
+<% end %>
